@@ -1,6 +1,7 @@
 import { KartController } from '../games/kart/KartController';
 import { PacController } from '../games/pacman/PacController';
 import { SerpentController } from '../games/snake/SerpentController';
+import { LiarsDiceController } from '../games/liars-dice/LiarsDiceController';
 import { DefaultController } from './DefaultController';
 import { GameControllerView } from './GameControllerView';
 
@@ -13,6 +14,7 @@ const CONTROLLER_FACTORIES: Record<string, () => GameControllerView> = {
   'nitro-kart-3d': () => new KartController(),
   'pacman-ghost-hunt': () => new PacController(),
   'neon-serpent': () => new SerpentController(),
+  'liars-dice': () => new LiarsDiceController(),
 };
 
 export function createControllerForGame(gameId: string | null): GameControllerView {

@@ -9,6 +9,7 @@ import { KartGame } from '../games/kart/KartGame';
 import { SpaceDogfightGame } from '../games/dogfight/SpaceDogfightGame';
 import { PacGame } from '../games/pacman/PacGame';
 import { NeonSerpentGame } from '../games/snake/NeonSerpentGame';
+import { LiarsDiceGame } from '../games/liars-dice/LiarsDiceGame';
 
 const ROOM_STORAGE_KEY = 'nitro_host_room_code';
 const DONATION_URL = 'https://saweria.co/fachrulmustofa';
@@ -42,6 +43,7 @@ export class PlatformApp {
     new SpaceDogfightGame(),
     new PacGame(),
     new NeonSerpentGame(),
+    new LiarsDiceGame(),
   ];
   private selectedGame: PlatformGame = this.games[0];
 

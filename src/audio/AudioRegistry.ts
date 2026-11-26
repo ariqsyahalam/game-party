@@ -1,4 +1,5 @@
 import { SpaceAudioEngine } from '../games/dogfight/SpaceAudioEngine';
+import { LiarsDiceAudioEngine } from '../games/liars-dice/LiarsDiceAudioEngine';
 import { DefaultAudioEngine, GameAudioEngine } from './GameAudioEngine';
 import { KartAudioEngine } from './KartAudioEngine';
 
@@ -10,6 +11,7 @@ import { KartAudioEngine } from './KartAudioEngine';
 const AUDIO_FACTORIES: Record<string, () => GameAudioEngine> = {
   'nitro-kart-3d': () => new KartAudioEngine(),
   'space-dogfight-2p': () => new SpaceAudioEngine(),
+  'liars-dice': () => new LiarsDiceAudioEngine(),
 };
 
 export function createAudioForGame(gameId: string | null): GameAudioEngine {
